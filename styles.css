@@ -237,7 +237,7 @@ button:focus-visible {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/Fuengirola.jpg') center/cover no-repeat;
+  background: url('Fuengirola.jpeg') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -374,12 +374,49 @@ button:focus-visible {
   font-weight: 600;
 }
 
-/* --- Menu Actions --- */
+/* --- About layout --- */
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .about-photo-wrapper {
+    flex-shrink: 0;
+    width: 240px;
+  }
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 240px;
+  border-radius: var(--radius);
+  border: 3px solid var(--color-primary);
+  object-fit: cover;
+}
+
+/* --- Menu CTA --- */
+.menu-cta-text {
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+  max-width: 540px;
+}
+
 .menu-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 2rem;
 }
 
 /* --- Food / Drinks Lists --- */
@@ -449,10 +486,47 @@ button:focus-visible {
 }
 
 /* --- Reviews --- */
+.ta-badge-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ta-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ta-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00B07B;
+  letter-spacing: -0.02em;
+  font-family: var(--font-body);
+}
+
 .reviews-intro {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--color-text-light);
-  margin-bottom: 1.5rem;
+  margin: 0;
+}
+
+.review-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px) calc(var(--radius) - 2px) 0 0;
+  margin: -1.25rem -1.25rem 1rem -1.25rem;
+  width: calc(100% + 2.5rem);
+}
+
+.review-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .reviews-grid {
@@ -487,6 +561,12 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1.1rem;
   letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
   margin-bottom: 0.5rem;
 }
 

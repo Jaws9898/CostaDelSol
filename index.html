@@ -4,11 +4,13 @@
   =============================================
   THINGS YOU NEED TO EDIT BEFORE GOING LIVE:
 
-  1. IMAGES      → Add CafeDelsol.png and Fuengirola.jpg to the /assets folder
-  2. PHONE       → Search for "TODO:phone" and add your phone number
-  3. EMAIL       → Search for "TODO:email" and add your email address
-  4. FAVICON     → Replace /assets/favicon.ico with your real favicon
-  5. MENU        → The full menu is in menu.html – edit items/prices there directly
+  1. PHONE       → Search for "TODO:phone" and add your phone number
+  2. EMAIL       → Search for "TODO:email" and add your email address
+  3. FAVICON     → Replace /assets/favicon.ico with your real favicon
+  4. MENU        → Add prices in menu.html
+  5. JAMES PHOTO → Ensure James Costa.jpg is in the root folder
+  6. REVIEWS     → Ensure Jamie.jpg, Adventure33167393901.jpg, Emily B.jpg,
+                   Aria M.jpg, Voyage66557603238.jpg are in the root folder
   =============================================
 -->
 <!DOCTYPE html>
@@ -71,7 +73,7 @@
   <!-- ======== HEADER / NAV ======== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo"><img src="assets/CafeDelsol.png" alt="Cafe del Sol" width="160" height="40"></a>
+      <a href="#top" class="logo"><img src="CafedelSol.jpg" alt="Cafe del Sol" width="160" height="40"></a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
@@ -79,7 +81,6 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#drinks">Drinks</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#find-us">Find Us</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -93,7 +94,7 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-content">
-      <img src="assets/CafeDelsol.png" alt="Cafe del Sol logo" class="hero-logo" width="280" height="70">
+      <img src="CafedelSol.jpg" alt="Cafe del Sol logo" class="hero-logo" width="280" height="70">
       <h1>Cafe del Sol</h1>
       <p class="hero-subtitle">Great coffee &amp; a warm welcome in Fuengirola</p>
       <a href="menu.html" class="btn btn-primary">See the Menu</a>
@@ -102,133 +103,28 @@
 
   <!-- ======== ABOUT ======== -->
   <section class="section" id="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>I've spent years behind the counter in busy coffee shops, learning how to serve great coffee and keep standards high day after day. After years of talking about it, I finally made the move to Spain and turned the idea into something real. My journey was documented on the Channel 4 TV show <em>A New Life in the Sun</em>, and the support from viewers who've come to find the café has been incredible.</p>
-      <p>Cafe del Sol has now been open for over a year, and it's grown faster than I ever expected thanks to a steady stream of regulars, visitors, and word-of-mouth reviews. Since opening, I've been improving the café nonstop—upgrading, tweaking, and pushing through the usual challenges that come with building something from scratch in a new country.</p>
-      <p>I wanted to create a friendly local spot where people come back not just for the coffee, but for the welcome. That's what Cafe del Sol is all about, and I can't wait to see you here.</p>
-      <p class="about-sign">— James</p>
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>I've spent years behind the counter in busy coffee shops, learning how to serve great coffee and keep standards high day after day. After years of talking about it, I finally made the move to Spain and turned the idea into something real. My journey was documented on the Channel 4 TV show <em>A New Life in the Sun</em>, and the support from viewers who've come to find the café has been incredible.</p>
+        <p>Cafe del Sol has now been open for over a year, and it's grown faster than I ever expected thanks to a steady stream of regulars, visitors, and word-of-mouth reviews. Since opening, I've been improving the café nonstop — upgrading, tweaking, and pushing through the usual challenges that come with building something from scratch in a new country.</p>
+        <p>I wanted to create a friendly local spot where people come back not just for the coffee, but for the welcome. That's what Cafe del Sol is all about, and I can't wait to see you here.</p>
+        <p class="about-sign">— James</p>
+      </div>
+      <div class="about-photo-wrapper">
+        <img src="James Costa.jpg" alt="James, owner of Cafe del Sol" class="about-photo">
+      </div>
     </div>
   </section>
 
-  <!-- ======== OPENING HOURS ======== -->
-  <section class="section section-alt" id="hours">
+  <!-- ======== MENU CTA ======== -->
+  <section class="section section-alt" id="menu">
     <div class="container">
-      <h2>Opening Hours</h2>
-      <table class="hours-table">
-        <tbody>
-          <tr><td>Monday</td><td>7 am – 3 pm</td></tr>
-          <tr><td>Tuesday</td><td>7 am – 3 pm</td></tr>
-          <tr><td>Wednesday</td><td>7 am – 3 pm</td></tr>
-          <tr><td>Thursday</td><td>7 am – 3 pm</td></tr>
-          <tr><td>Friday</td><td>7 am – 3 pm</td></tr>
-          <tr><td>Saturday</td><td>10 am – 4 pm</td></tr>
-          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ======== MENU (Food / Fridge Staples) ======== -->
-  <section class="section" id="menu">
-    <div class="container">
-      <h2>Menu</h2>
-
+      <h2>Our Menu</h2>
+      <p class="menu-cta-text">From freshly pulled espresso to salted caramel lattes, toasties to homemade sausage rolls — take a look at everything we serve.</p>
       <div class="menu-actions">
         <a href="menu.html" class="btn btn-primary">View Full Menu</a>
-        <a href="menu.html" target="_blank" rel="noopener" class="btn btn-outline">Open Menu in New Tab</a>
-      </div>
-
-      <h3>Today's Fridge Staples</h3>
-      <ul class="food-list">
-        <li>Ham &amp; Cheese Toastie</li>
-        <li>Cheese &amp; Tomato Toastie</li>
-        <li>Mozzarella &amp; Tomato</li>
-        <li>Egg Mayo</li>
-        <li>Cheese &amp; Onion</li>
-        <li>Tuna Mayo</li>
-        <li>Ham Salad</li>
-      </ul>
-
-      <h3>Porky Pies Collaboration</h3>
-      <ul class="food-list">
-        <li>Sausage Roll</li>
-        <li>Scotch Egg</li>
-        <li>Pork Pie</li>
-        <li>Minced Beef Pie</li>
-        <li>Chicken &amp; Mushroom Pie</li>
-        <li>Steak &amp; Ale Pie</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ======== DRINKS ======== -->
-  <section class="section section-alt" id="drinks">
-    <div class="container">
-      <h2>Drinks</h2>
-      <div class="drinks-grid">
-
-        <div class="drinks-category">
-          <h3>Coffee</h3>
-          <ul>
-            <li>Single Espresso</li>
-            <li>Double Espresso</li>
-            <li>Cortado</li>
-            <li>Americano</li>
-            <li>Flat White</li>
-            <li>Latte</li>
-            <li>Cappuccino</li>
-          </ul>
-        </div>
-
-        <div class="drinks-category">
-          <h3>Tea</h3>
-          <ul>
-            <li>English Breakfast Tea</li>
-            <li>Herbal / Fruit Tea</li>
-          </ul>
-        </div>
-
-        <div class="drinks-category">
-          <h3>Speciality</h3>
-          <ul>
-            <li>Hot Chocolate</li>
-            <li>Chai Latte</li>
-            <li>Caramel Latte</li>
-            <li>Barraquito</li>
-          </ul>
-        </div>
-
-        <div class="drinks-category">
-          <h3>Iced Drinks</h3>
-          <ul>
-            <li>Strawberry Split Smoothie</li>
-            <li>Tropical Smoothie</li>
-            <li>Green Tornado Smoothie</li>
-            <li>Iced Americano</li>
-            <li>Iced Latte</li>
-            <li>Iced Mocha</li>
-            <li>Frappe Latte</li>
-            <li>Strawberry Frappe</li>
-            <li>Banana Frappe</li>
-          </ul>
-        </div>
-
-        <div class="drinks-category">
-          <h3>Seasonal</h3>
-          <ul>
-            <li>Strawberry + Vanilla Iced Matcha Latte</li>
-          </ul>
-        </div>
-
-        <div class="drinks-category">
-          <h3>Extras</h3>
-          <ul>
-            <li>Syrup / Cream</li>
-            <li>Oat Milk / Almond Milk</li>
-          </ul>
-        </div>
-
+        <a href="menu.html" target="_blank" rel="noopener" class="btn btn-outline">Open in New Tab</a>
       </div>
     </div>
   </section>
@@ -237,68 +133,100 @@
   <section class="section" id="reviews">
     <div class="container">
       <h2>Reviews</h2>
-      <p class="reviews-intro">Rated <strong>4.9 out of 5</strong> on TripAdvisor. Here's what our customers are saying.</p>
+
+      <div class="ta-badge-wrapper">
+        <div class="ta-badge">
+          <!-- Simplified TripAdvisor owl eyes -->
+          <svg width="40" height="26" viewBox="0 0 80 52" fill="none" aria-hidden="true">
+            <ellipse cx="20" cy="26" rx="20" ry="20" fill="#34E0A1"/>
+            <ellipse cx="60" cy="26" rx="20" ry="20" fill="#34E0A1"/>
+            <circle cx="20" cy="26" r="11" fill="white"/>
+            <circle cx="60" cy="26" r="11" fill="white"/>
+            <circle cx="20" cy="26" r="6" fill="#34E0A1"/>
+            <circle cx="60" cy="26" r="6" fill="#34E0A1"/>
+            <circle cx="22" cy="24" r="2" fill="white"/>
+            <circle cx="62" cy="24" r="2" fill="white"/>
+          </svg>
+          <span class="ta-name">tripadvisor</span>
+        </div>
+        <p class="reviews-intro">Rated <strong>5.0</strong> on Tripadvisor &mdash; here's what our customers are saying.</p>
+      </div>
 
       <div class="reviews-grid">
 
+        <!-- Jamie — has photo -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-photo-wrapper">
+            <img src="Jamie.jpg" alt="Photo from Jamie's visit" class="review-photo" loading="lazy">
           </div>
-          <h3 class="review-title">"Fantastic Coffee Shop"</h3>
-          <p class="review-text">Popped in everyday in July during a short trip to Fuengirola. The salted caramel latte was one of the best I have ever had! Would recommend to anyone who loves coffee. Can't wait to come back.</p>
-          <p class="review-source">— TripAdvisor Review</p>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">Jul 2025 &middot; With family</p>
+          <h3 class="review-title">"The best coffee in Fuengirola"</h3>
+          <p class="review-text">It appeared every day in July during my short trip to Fuengirola. The salted caramel latte was one of the best I've ever had! I would recommend this place to anyone who loves coffee. I can't wait to go back next month.</p>
+          <p class="review-source">— Jamie</p>
         </div>
 
+        <!-- Adventure33167393901 — has photo -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-photo-wrapper">
+            <img src="Adventure33167393901.jpg" alt="Photo from a customer visit" class="review-photo" loading="lazy">
           </div>
-          <h3 class="review-title">"Amazing coffee"</h3>
-          <p class="review-text">What a gem! Finally we can say we found a place to get an amazing cup of coffee in Fuengirola! Friendly service and a lovely atmosphere. We'll definitely be back.</p>
-          <p class="review-source">— TripAdvisor Review</p>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">Oct 2025 &middot; With family</p>
+          <h3 class="review-title">"Perfect place to unwind in the afternoon"</h3>
+          <p class="review-text">Great atmosphere, not the usual pop music playing in the background, and delicious iced lattes. The service was quick and the café is clean. Good location.</p>
+          <p class="review-source">— Adventure33167393901</p>
         </div>
 
+        <!-- Emily B — has photo -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-photo-wrapper">
+            <img src="Emily B.jpg" alt="Photo from Emily's visit" class="review-photo" loading="lazy">
           </div>
-          <h3 class="review-title">"A hidden gem"</h3>
-          <p class="review-text">Coffee is the best along the coast and the food is outstanding. Lovely and clean and James is so accommodating and makes you feel so welcome. The sausage rolls are 12/10! Fabulous afternoon tea with homemade scones, jam, and proper clotted cream.</p>
-          <p class="review-source">— TripAdvisor Review</p>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">Jul 2025 &middot; With family</p>
+          <h3 class="review-title">"Delicious coffee shop"</h3>
+          <p class="review-text">Beautiful café. A daily visit when you're in Fuengirola; it serves lovely coffee, as well as breakfast sandwiches and pastries.</p>
+          <p class="review-source">— Emily B</p>
         </div>
 
+        <!-- Aria M — has photo -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-photo-wrapper">
+            <img src="Aria M.jpg" alt="Photo from Aria's visit" class="review-photo" loading="lazy">
           </div>
-          <h3 class="review-title">"A must do when coming to Fuengirola!"</h3>
-          <p class="review-text">Amazing venue! Cafe owner was very friendly and welcoming. 100% recommend! The smoothie was insanely delicious. We discovered this coffee shop through a local search and so glad we did.</p>
-          <p class="review-source">— TripAdvisor Review</p>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">Jul 2025 &middot; With family</p>
+          <h3 class="review-title">"Delicious coffee shop"</h3>
+          <p class="review-text">Beautiful café. A daily visit when you're in Fuengirola; it serves lovely coffee, as well as breakfast sandwiches and pastries.</p>
+          <p class="review-source">— Aria M</p>
         </div>
 
+        <!-- Voyage66557603238 — has photo -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-photo-wrapper">
+            <img src="Voyage66557603238.jpg" alt="Photo from a customer visit" class="review-photo" loading="lazy">
           </div>
-          <h3 class="review-title">"As seen on A New Life in the Sun"</h3>
-          <p class="review-text">We followed the opening of this café on Channel 4's A New Life in the Sun and sought it out when visiting Fuengirola. A charming host, serving a wide variety of drinks and snacks. The coffee was great and the cake was brilliant. Well worth a visit.</p>
-          <p class="review-source">— TripAdvisor Review</p>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">May 2025 &middot; Friends</p>
+          <h3 class="review-title">"Fabulous!!!!"</h3>
+          <p class="review-text">We had the best afternoon tea! The homemade scones were amazing. The Bakewell cake with cava flowers was delicious! If you're in Fuengirola, you absolutely must try this reasonably priced and very good gem.</p>
+          <p class="review-source">— Voyage66557603238</p>
         </div>
 
+        <!-- Nicolas P. -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-date">2025</p>
           <h3 class="review-title">"Small, but perfectly formed!"</h3>
-          <p class="review-text">Great coffee, nice cake—Belgian chocolate brownie was amazing. Probably one of the best cafés in Fuengirola. Great little coffee bar in the centre, very close to the train and bus station. James is very welcoming and friendly. Reasonably priced drinks and snacks.</p>
-          <p class="review-source">— Nicolas P. via TripAdvisor</p>
+          <p class="review-text">Great coffee, nice cake — Belgian chocolate brownie was amazing. Probably one of the best cafés in Fuengirola. Very close to the train and bus station. James is very welcoming and friendly. Reasonably priced drinks and snacks.</p>
+          <p class="review-source">— Nicolas P.</p>
         </div>
 
       </div>
 
       <div class="reviews-cta">
-        <a href="https://www.tripadvisor.es/Restaurant_Review-g315915-d28619768-Reviews-Cafe_Del_Sol_Fuengirola-Fuengirola_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener" class="btn btn-outline">Read All Reviews on TripAdvisor</a>
+        <a href="https://www.tripadvisor.es/Restaurant_Review-g315915-d28619768-Reviews-Cafe_Del_Sol_Fuengirola-Fuengirola_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener" class="btn btn-outline">Read All Reviews on Tripadvisor</a>
       </div>
     </div>
   </section>
@@ -336,16 +264,32 @@
     </div>
   </section>
 
+  <!-- ======== OPENING HOURS ======== -->
+  <section class="section section-alt" id="hours">
+    <div class="container">
+      <h2>Opening Hours</h2>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Monday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Tuesday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Wednesday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Thursday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Friday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Saturday</td><td>10 am – 4 pm</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <!-- ======== FOOTER ======== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61565031385537" target="_blank" rel="noopener" aria-label="Facebook">
-          <!-- Facebook SVG icon -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
         </a>
         <a href="https://www.instagram.com/cafedelsolfuengirola/" target="_blank" rel="noopener" aria-label="Instagram">
-          <!-- Instagram SVG icon -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.08 4.08 0 0 1 1.523.99 4.08 4.08 0 0 1 .99 1.524c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.08 4.08 0 0 1-.99 1.523 4.08 4.08 0 0 1-1.524.99c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.08 4.08 0 0 1-1.523-.99 4.08 4.08 0 0 1-.99-1.524c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.08 4.08 0 0 1 .99-1.523A4.08 4.08 0 0 1 5.15 2.206c.46-.163 1.26-.349 2.43-.403C8.845 2.175 9.225 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.902.13 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.058 1.278.261 2.15.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.297 1.636.5 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.058 2.15-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.297-.763.5-1.636.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.278-.261-2.15-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63c-.763-.297-1.636-.5-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
         </a>
       </div>
