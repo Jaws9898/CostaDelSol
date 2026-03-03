@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu – Cafe del Sol</title>
+  <meta name="description" content="Full menu for Cafe del Sol, Fuengirola. Coffee, tea, speciality drinks, smoothies, frappes, toasties, pies, and more.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <style>
+    /* =============================================
+       CAFE DEL SOL – MENU PAGE
+       Standalone, print-friendly, brand-matched
+       ============================================= */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #ddc272;
+      --black: #0d0d0d;
+      --black-soft: #1a1a1a;
+      --white: #ffffff;
+      --off-white: #f5f4f0;
+      --border: #e0ddd6;
+      --text: #1a1a1a;
+      --text-light: #555;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--off-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Menu wrapper --- */
+    .menu-page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      min-height: 100vh;
+    }
+
+    /* --- Header --- */
+    .menu-header {
+      background: var(--black);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .menu-header img {
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    .menu-header h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--white);
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .menu-header p {
+      color: var(--gold);
+      font-size: 0.95rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid var(--gold);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      transition: 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* --- Section --- */
+    .menu-section {
+      padding: 2rem 1.5rem 1rem;
+    }
+
+    .menu-section + .menu-section {
+      border-top: 1px solid var(--border);
+    }
+
+    .menu-section h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.5rem;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .menu-section h3 {
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin: 1.25rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+    }
+
+    /* --- Menu items --- */
+    .menu-items {
+      list-style: none;
+      columns: 1;
+    }
+
+    .menu-items li {
+      padding: 0.35rem 0;
+      border-bottom: 1px dotted var(--border);
+      display: flex;
+      justify-content: space-between;
+      break-inside: avoid;
+    }
+
+    .menu-items li:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      font-weight: 500;
+    }
+
+    .item-price {
+      color: var(--text-light);
+      font-weight: 400;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    /* Two-column layout on wider screens */
+    @media (min-width: 520px) {
+      .menu-items.two-col {
+        columns: 2;
+        column-gap: 2.5rem;
+      }
+    }
+
+    /* --- Drinks grid --- */
+    .drinks-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 520px) {
+      .drinks-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .drink-group h3 {
+      margin-top: 0;
+    }
+
+    .drink-group ul {
+      list-style: none;
+    }
+
+    .drink-group li {
+      padding: 0.3rem 0;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .drink-group li:last-child {
+      border-bottom: none;
+    }
+
+    /* --- Divider --- */
+    .gold-divider {
+      border: none;
+      height: 2px;
+      background: var(--gold);
+      margin: 0;
+    }
+
+    /* --- Footer --- */
+    .menu-footer {
+      background: var(--black);
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 3px solid var(--gold);
+    }
+
+    .menu-footer p {
+      color: var(--white);
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .menu-footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .menu-footer .social-links a {
+      color: var(--white);
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .menu-footer .social-links a:hover {
+      opacity: 1;
+    }
+
+    /* --- Print styles --- */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .menu-page {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .back-link {
+        display: none;
+      }
+
+      .menu-header {
+        padding: 1.5rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .menu-section {
+        break-inside: avoid;
+      }
+
+      .menu-footer {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-page">
+
+    <!-- Header -->
+    <header class="menu-header">
+      <img src="/assets/logo.png" alt="Cafe del Sol" width="220" height="55">
+      <h1>Our Menu</h1>
+      <p>C. Coronel Ripollet, 4, Fuengirola, Málaga</p>
+      <a href="index.html" class="back-link">&larr; Back to site</a>
+    </header>
+
+    <!-- ======== COFFEE & HOT DRINKS ======== -->
+    <section class="menu-section">
+      <h2>Drinks</h2>
+
+      <div class="drinks-grid">
+
+        <div class="drink-group">
+          <h3>Coffee</h3>
+          <ul>
+            <li>Single Espresso</li>
+            <li>Double Espresso</li>
+            <li>Cortado</li>
+            <li>Americano</li>
+            <li>Flat White</li>
+            <li>Latte</li>
+            <li>Cappuccino</li>
+          </ul>
+        </div>
+
+        <div class="drink-group">
+          <h3>Tea</h3>
+          <ul>
+            <li>English Breakfast Tea</li>
+            <li>Herbal / Fruit Tea</li>
+          </ul>
+
+          <h3>Speciality</h3>
+          <ul>
+            <li>Hot Chocolate</li>
+            <li>Chai Latte</li>
+            <li>Caramel Latte</li>
+            <li>Barraquito</li>
+          </ul>
+        </div>
+
+        <div class="drink-group">
+          <h3>Iced Drinks</h3>
+          <ul>
+            <li>Strawberry Split Smoothie</li>
+            <li>Tropical Smoothie</li>
+            <li>Green Tornado Smoothie</li>
+            <li>Iced Americano</li>
+            <li>Iced Latte</li>
+            <li>Iced Mocha</li>
+            <li>Frappe Latte</li>
+            <li>Strawberry Frappe</li>
+            <li>Banana Frappe</li>
+          </ul>
+        </div>
+
+        <div class="drink-group">
+          <h3>Seasonal</h3>
+          <ul>
+            <li>Strawberry + Vanilla Iced Matcha Latte</li>
+          </ul>
+
+          <h3>Extras</h3>
+          <ul>
+            <li>Syrup / Cream</li>
+            <li>Oat Milk / Almond Milk</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="gold-divider">
+
+    <!-- ======== FOOD ======== -->
+    <section class="menu-section">
+      <h2>Today's Fridge Staples</h2>
+      <ul class="menu-items two-col">
+        <li><span class="item-name">Ham &amp; Cheese Toastie</span></li>
+        <li><span class="item-name">Cheese &amp; Tomato Toastie</span></li>
+        <li><span class="item-name">Mozzarella &amp; Tomato</span></li>
+        <li><span class="item-name">Egg Mayo</span></li>
+        <li><span class="item-name">Cheese &amp; Onion</span></li>
+        <li><span class="item-name">Tuna Mayo</span></li>
+        <li><span class="item-name">Ham Salad</span></li>
+      </ul>
+    </section>
+
+    <hr class="gold-divider">
+
+    <!-- ======== PORKY PIES ======== -->
+    <section class="menu-section">
+      <h2>Porky Pies Collaboration</h2>
+      <ul class="menu-items two-col">
+        <li><span class="item-name">Sausage Roll</span></li>
+        <li><span class="item-name">Scotch Egg</span></li>
+        <li><span class="item-name">Pork Pie</span></li>
+        <li><span class="item-name">Minced Beef Pie</span></li>
+        <li><span class="item-name">Chicken &amp; Mushroom Pie</span></li>
+        <li><span class="item-name">Steak &amp; Ale Pie</span></li>
+      </ul>
+    </section>
+
+    <hr class="gold-divider">
+
+    <!-- ======== HOURS ======== -->
+    <section class="menu-section" style="text-align:center;">
+      <h2>Opening Hours</h2>
+      <p style="margin-top:0.75rem; line-height:1.8;">
+        <strong>Mon–Fri</strong> 7 am – 3 pm<br>
+        <strong>Saturday</strong> 10 am – 4 pm<br>
+        <strong>Sunday</strong> Closed
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="menu-footer">
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61565031385537" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/cafedelsolfuengirola/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.08 4.08 0 0 1 1.523.99 4.08 4.08 0 0 1 .99 1.524c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.08 4.08 0 0 1-.99 1.523 4.08 4.08 0 0 1-1.524.99c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.08 4.08 0 0 1-1.523-.99 4.08 4.08 0 0 1-.99-1.524c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.08 4.08 0 0 1 .99-1.523A4.08 4.08 0 0 1 5.15 2.206c.46-.163 1.26-.349 2.43-.403C8.845 2.175 9.225 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.902.13 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.058 1.278.261 2.15.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.297 1.636.5 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.058 2.15-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.297-.763.5-1.636.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.278-.261-2.15-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63c-.763-.297-1.636-.5-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+      <p>&copy; 2025 Cafe del Sol. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

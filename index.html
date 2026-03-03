@@ -4,12 +4,13 @@
   =============================================
   THINGS YOU NEED TO EDIT BEFORE GOING LIVE:
 
-  1. MENU PDF    → Replace /assets/menu.pdf with your actual PDF file path
+  1. LOGO        → Save your logo as /assets/logo.png (referenced in header + hero)
   2. PHONE       → Search for "TODO:phone" and add your phone number
   3. EMAIL       → Search for "TODO:email" and add your email address
   4. REVIEWS     → Replace /assets/reviews/fb-1.jpg etc. with real screenshot paths (update the array in script.js)
   5. TRIPADVISOR → Paste your TripAdvisor widget code in the marked placeholder below
   6. FAVICON     → Replace /assets/favicon.ico with your real favicon
+  7. MENU        → The full menu is in menu.html – edit items/prices there directly
   =============================================
 -->
 <!DOCTYPE html>
@@ -72,7 +73,7 @@
   <!-- ======== HEADER / NAV ======== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo">Cafe del Sol</a>
+      <a href="#top" class="logo"><img src="/assets/logo.png" alt="Cafe del Sol" width="160" height="40"></a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
@@ -92,9 +93,10 @@
   <!-- ======== HERO ======== -->
   <section class="hero">
     <div class="container">
+      <img src="/assets/logo.png" alt="Cafe del Sol logo" class="hero-logo" width="280" height="70">
       <h1>Cafe del Sol</h1>
       <p class="hero-subtitle">Great coffee &amp; a warm welcome in Fuengirola</p>
-      <a href="#menu" class="btn btn-primary">See the Menu</a>
+      <a href="menu.html" class="btn btn-primary">See the Menu</a>
     </div>
   </section>
 
@@ -132,8 +134,8 @@
       <h2>Menu</h2>
 
       <div class="menu-actions">
-        <a href="/assets/menu.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Menu (PDF)</a>
-        <a href="/assets/menu.pdf" download class="btn btn-outline">Download Menu</a>
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+        <a href="menu.html" target="_blank" rel="noopener" class="btn btn-outline">Open Menu in New Tab</a>
       </div>
 
       <h3>Today's Fridge Staples</h3>

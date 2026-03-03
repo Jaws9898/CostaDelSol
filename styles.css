@@ -11,14 +11,17 @@
 }
 
 :root {
-  --color-primary: #c0793a;
-  --color-primary-dark: #a0632e;
-  --color-bg: #faf8f5;
-  --color-bg-alt: #f0ebe3;
-  --color-text: #2c2c2c;
-  --color-text-light: #5a5a5a;
+  --color-primary: #c9a84c;
+  --color-primary-dark: #b8943a;
+  --color-gold-light: #ddc272;
+  --color-black: #0d0d0d;
+  --color-black-soft: #1a1a1a;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f4f0;
+  --color-text: #1a1a1a;
+  --color-text-light: #555555;
   --color-white: #ffffff;
-  --color-border: #e0d8ce;
+  --color-border: #e0ddd6;
   --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-heading: Georgia, 'Times New Roman', serif;
   --max-width: 960px;
@@ -72,8 +75,8 @@ button:focus-visible {
 
 /* --- Header --- */
 .site-header {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-black);
+  border-bottom: 2px solid var(--color-primary);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -83,18 +86,21 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
 .logo:hover {
-  color: var(--color-primary-dark);
+  opacity: 0.9;
 }
 
 /* Hamburger */
@@ -116,7 +122,7 @@ button:focus-visible {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--color-white);
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
 }
@@ -157,8 +163,8 @@ button:focus-visible {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-black);
+  border-bottom: 2px solid var(--color-primary);
   padding: 1rem 0;
 }
 
@@ -179,7 +185,7 @@ button:focus-visible {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .main-nav a:hover {
@@ -214,27 +220,34 @@ button:focus-visible {
   }
 
   .main-nav a:hover {
-    background: var(--color-bg-alt);
+    background: var(--color-black-soft);
   }
 }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: var(--color-black);
   color: var(--color-white);
   text-align: center;
-  padding: 4rem 0 3.5rem;
+  padding: 3.5rem 0 3rem;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.hero-logo {
+  max-width: 280px;
+  margin: 0 auto 1.5rem;
 }
 
 .hero h1 {
   font-family: var(--font-heading);
   font-size: 2.4rem;
   margin-bottom: 0.5rem;
+  color: var(--color-white);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  opacity: 0.9;
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -276,17 +289,18 @@ button:focus-visible {
   color: var(--color-white);
 }
 
-/* Hero button override for white variant */
+/* Hero button override for gold variant */
 .hero .btn-primary {
-  background: var(--color-white);
-  color: var(--color-primary);
-  border-color: var(--color-white);
+  background: var(--color-primary);
+  color: var(--color-black);
+  border-color: var(--color-primary);
+  font-weight: 700;
 }
 
 .hero .btn-primary:hover {
-  background: transparent;
-  color: var(--color-white);
-  border-color: var(--color-white);
+  background: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  color: var(--color-black);
 }
 
 /* --- Sections --- */
@@ -302,7 +316,7 @@ button:focus-visible {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   margin-bottom: 1.25rem;
-  color: var(--color-primary-dark);
+  color: var(--color-black);
 }
 
 .section h3 {
@@ -388,12 +402,13 @@ button:focus-visible {
   border-radius: var(--radius);
   padding: 1.25rem;
   border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
 }
 
 .drinks-category h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: var(--color-primary-dark);
+  color: var(--color-black);
   font-size: 1.05rem;
 }
 
@@ -523,8 +538,9 @@ button:focus-visible {
 
 /* --- Footer --- */
 .site-footer {
-  background: var(--color-text);
+  background: var(--color-black);
   color: var(--color-white);
+  border-top: 2px solid var(--color-primary);
   padding: 1.5rem 0;
 }
 
