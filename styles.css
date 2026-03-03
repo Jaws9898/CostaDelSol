@@ -226,11 +226,31 @@ button:focus-visible {
 
 /* --- Hero --- */
 .hero {
-  background: var(--color-black);
+  position: relative;
   color: var(--color-white);
   text-align: center;
-  padding: 3.5rem 0 3rem;
+  padding: 5rem 0 4rem;
   border-bottom: 3px solid var(--color-primary);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('assets/Fuengirola.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-logo {
@@ -243,12 +263,14 @@ button:focus-visible {
   font-size: 2.4rem;
   margin-bottom: 0.5rem;
   color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--color-primary);
   margin-bottom: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Buttons --- */
@@ -427,81 +449,82 @@ button:focus-visible {
 }
 
 /* --- Reviews --- */
-.reviews-subsection {
-  margin-bottom: 2rem;
-}
-
-.tripadvisor-placeholder {
-  background: var(--color-bg-alt);
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  text-align: center;
-}
-
-.placeholder-note {
+.reviews-intro {
+  font-size: 1.05rem;
   color: var(--color-text-light);
-  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Facebook gallery */
-.fb-gallery {
+.reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
-.fb-gallery img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: var(--radius);
-  cursor: pointer;
+@media (min-width: 520px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.review-card {
+  background: var(--color-white);
   border: 1px solid var(--color-border);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.fb-gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-/* --- Lightbox --- */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.85);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.lightbox.active {
-  display: flex;
-}
-
-.lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
+  border-top: 3px solid var(--color-primary);
   border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-  background: none;
-  border: none;
-  color: var(--color-white);
-  font-size: 2.5rem;
-  cursor: pointer;
-  line-height: 1;
+.review-stars {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
 }
 
-.lightbox-close:hover {
-  opacity: 0.7;
+.review-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+
+.review-source {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.reviews-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* --- About sign-off --- */
+.about-sign {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
 /* --- Map --- */

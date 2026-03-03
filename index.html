@@ -4,13 +4,11 @@
   =============================================
   THINGS YOU NEED TO EDIT BEFORE GOING LIVE:
 
-  1. LOGO        → Save your logo as /assets/logo.svg (referenced in header + hero)
+  1. IMAGES      → Add CafeDelsol.png and Fuengirola.jpg to the /assets folder
   2. PHONE       → Search for "TODO:phone" and add your phone number
   3. EMAIL       → Search for "TODO:email" and add your email address
-  4. REVIEWS     → Replace /assets/reviews/fb-1.jpg etc. with real screenshot paths (update the array in script.js)
-  5. TRIPADVISOR → Paste your TripAdvisor widget code in the marked placeholder below
-  6. FAVICON     → Replace /assets/favicon.ico with your real favicon
-  7. MENU        → The full menu is in menu.html – edit items/prices there directly
+  4. FAVICON     → Replace /assets/favicon.ico with your real favicon
+  5. MENU        → The full menu is in menu.html – edit items/prices there directly
   =============================================
 -->
 <!DOCTYPE html>
@@ -73,7 +71,7 @@
   <!-- ======== HEADER / NAV ======== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo"><img src="/assets/logo.svg" alt="Cafe del Sol" width="160" height="40"></a>
+      <a href="#top" class="logo"><img src="assets/CafeDelsol.png" alt="Cafe del Sol" width="160" height="40"></a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
@@ -92,8 +90,10 @@
 
   <!-- ======== HERO ======== -->
   <section class="hero">
-    <div class="container">
-      <img src="/assets/logo.svg" alt="Cafe del Sol logo" class="hero-logo" width="280" height="70">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <img src="assets/CafeDelsol.png" alt="Cafe del Sol logo" class="hero-logo" width="280" height="70">
       <h1>Cafe del Sol</h1>
       <p class="hero-subtitle">Great coffee &amp; a warm welcome in Fuengirola</p>
       <a href="menu.html" class="btn btn-primary">See the Menu</a>
@@ -104,9 +104,10 @@
   <section class="section" id="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>James has spent years behind the counter in busy coffee shops, learning how to serve great coffee and keep standards high day after day. After years of talking about it, he made the move to Spain and turned the idea into something real, with his journey documented on the TV show <em>A Life in the Sun</em>.</p>
-      <p>Cafe del Sol has now been open for over a year, and it's grown fast thanks to a steady stream of regulars, visitors, and word-of-mouth reviews. Since opening, James has kept improving the café nonstop—upgrading, tweaking, and pushing through the usual challenges that come with building something from scratch.</p>
-      <p>The result is a friendly local spot where people come back not just for the coffee, but for the welcome.</p>
+      <p>I've spent years behind the counter in busy coffee shops, learning how to serve great coffee and keep standards high day after day. After years of talking about it, I finally made the move to Spain and turned the idea into something real. My journey was documented on the Channel 4 TV show <em>A New Life in the Sun</em>, and the support from viewers who've come to find the café has been incredible.</p>
+      <p>Cafe del Sol has now been open for over a year, and it's grown faster than I ever expected thanks to a steady stream of regulars, visitors, and word-of-mouth reviews. Since opening, I've been improving the café nonstop—upgrading, tweaking, and pushing through the usual challenges that come with building something from scratch in a new country.</p>
+      <p>I wanted to create a friendly local spot where people come back not just for the coffee, but for the welcome. That's what Cafe del Sol is all about, and I can't wait to see you here.</p>
+      <p class="about-sign">— James</p>
     </div>
   </section>
 
@@ -236,33 +237,71 @@
   <section class="section" id="reviews">
     <div class="container">
       <h2>Reviews</h2>
+      <p class="reviews-intro">Rated <strong>4.9 out of 5</strong> on TripAdvisor. Here's what our customers are saying.</p>
 
-      <!-- TripAdvisor -->
-      <div class="reviews-subsection">
-        <h3>TripAdvisor</h3>
-        <div class="tripadvisor-placeholder">
-          <!-- ============================================
-               TODO: Paste your TripAdvisor widget code here
-               ============================================ -->
-          <p class="placeholder-note">TripAdvisor widget will appear here.<br>Paste your embed code to replace this placeholder.</p>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"Fantastic Coffee Shop"</h3>
+          <p class="review-text">Popped in everyday in July during a short trip to Fuengirola. The salted caramel latte was one of the best I have ever had! Would recommend to anyone who loves coffee. Can't wait to come back.</p>
+          <p class="review-source">— TripAdvisor Review</p>
         </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"Amazing coffee"</h3>
+          <p class="review-text">What a gem! Finally we can say we found a place to get an amazing cup of coffee in Fuengirola! Friendly service and a lovely atmosphere. We'll definitely be back.</p>
+          <p class="review-source">— TripAdvisor Review</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"A hidden gem"</h3>
+          <p class="review-text">Coffee is the best along the coast and the food is outstanding. Lovely and clean and James is so accommodating and makes you feel so welcome. The sausage rolls are 12/10! Fabulous afternoon tea with homemade scones, jam, and proper clotted cream.</p>
+          <p class="review-source">— TripAdvisor Review</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"A must do when coming to Fuengirola!"</h3>
+          <p class="review-text">Amazing venue! Cafe owner was very friendly and welcoming. 100% recommend! The smoothie was insanely delicious. We discovered this coffee shop through a local search and so glad we did.</p>
+          <p class="review-source">— TripAdvisor Review</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"As seen on A New Life in the Sun"</h3>
+          <p class="review-text">We followed the opening of this café on Channel 4's A New Life in the Sun and sought it out when visiting Fuengirola. A charming host, serving a wide variety of drinks and snacks. The coffee was great and the cake was brilliant. Well worth a visit.</p>
+          <p class="review-source">— TripAdvisor Review</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <h3 class="review-title">"Small, but perfectly formed!"</h3>
+          <p class="review-text">Great coffee, nice cake—Belgian chocolate brownie was amazing. Probably one of the best cafés in Fuengirola. Great little coffee bar in the centre, very close to the train and bus station. James is very welcoming and friendly. Reasonably priced drinks and snacks.</p>
+          <p class="review-source">— Nicolas P. via TripAdvisor</p>
+        </div>
+
       </div>
 
-      <!-- Facebook Reviews Gallery -->
-      <div class="reviews-subsection">
-        <h3>Facebook Reviews</h3>
-        <div class="fb-gallery" id="fb-gallery">
-          <!-- Images injected by script.js -->
-        </div>
+      <div class="reviews-cta">
+        <a href="https://www.tripadvisor.es/Restaurant_Review-g315915-d28619768-Reviews-Cafe_Del_Sol_Fuengirola-Fuengirola_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener" class="btn btn-outline">Read All Reviews on TripAdvisor</a>
       </div>
     </div>
   </section>
-
-  <!-- ======== LIGHTBOX ======== -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-label="Review image" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img class="lightbox-img" id="lightbox-img" src="" alt="Review screenshot">
-  </div>
 
   <!-- ======== FIND US ======== -->
   <section class="section section-alt" id="find-us">
