@@ -1,0 +1,317 @@
+<!--
+  =============================================
+  CAFE DEL SOL – MVP WEBSITE
+  =============================================
+  THINGS YOU NEED TO EDIT BEFORE GOING LIVE:
+
+  1. MENU PDF    → Replace /assets/menu.pdf with your actual PDF file path
+  2. PHONE       → Search for "TODO:phone" and add your phone number
+  3. EMAIL       → Search for "TODO:email" and add your email address
+  4. REVIEWS     → Replace /assets/reviews/fb-1.jpg etc. with real screenshot paths (update the array in script.js)
+  5. TRIPADVISOR → Paste your TripAdvisor widget code in the marked placeholder below
+  6. FAVICON     → Replace /assets/favicon.ico with your real favicon
+  =============================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe del Sol – Coffee &amp; Café in Fuengirola, Málaga</title>
+  <meta name="description" content="Cafe del Sol is a friendly local café in Fuengirola, Málaga, serving great coffee, fresh toasties, pies, and cold drinks. Open Monday–Saturday.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cafe del Sol – Coffee & Café in Fuengirola">
+  <meta property="og:description" content="A friendly local café in Fuengirola, Málaga. Great coffee, fresh food, and a warm welcome.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cafedelsol.es">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:locale" content="en_GB">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Cafe del Sol",
+    "image": "/assets/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. Coronel Ripollet, 4, Bajo Edif. Miami 3",
+      "addressLocality": "Fuengirola",
+      "addressRegion": "Málaga",
+      "postalCode": "29640",
+      "addressCountry": "ES"
+    },
+    "url": "https://cafedelsol.es",
+    "telephone": "",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "10:00", "closes": "16:00" }
+    ],
+    "servesCuisine": "Coffee, Café",
+    "priceRange": "€",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61565031385537",
+      "https://www.instagram.com/cafedelsolfuengirola/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ======== HEADER / NAV ======== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Cafe del Sol</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#drinks">Drinks</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#find-us">Find Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Cafe del Sol</h1>
+      <p class="hero-subtitle">Great coffee &amp; a warm welcome in Fuengirola</p>
+      <a href="#menu" class="btn btn-primary">See the Menu</a>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>James has spent years behind the counter in busy coffee shops, learning how to serve great coffee and keep standards high day after day. After years of talking about it, he made the move to Spain and turned the idea into something real, with his journey documented on the TV show <em>A Life in the Sun</em>.</p>
+      <p>Cafe del Sol has now been open for over a year, and it's grown fast thanks to a steady stream of regulars, visitors, and word-of-mouth reviews. Since opening, James has kept improving the café nonstop—upgrading, tweaking, and pushing through the usual challenges that come with building something from scratch.</p>
+      <p>The result is a friendly local spot where people come back not just for the coffee, but for the welcome.</p>
+    </div>
+  </section>
+
+  <!-- ======== OPENING HOURS ======== -->
+  <section class="section section-alt" id="hours">
+    <div class="container">
+      <h2>Opening Hours</h2>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Monday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Tuesday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Wednesday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Thursday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Friday</td><td>7 am – 3 pm</td></tr>
+          <tr><td>Saturday</td><td>10 am – 4 pm</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======== MENU (Food / Fridge Staples) ======== -->
+  <section class="section" id="menu">
+    <div class="container">
+      <h2>Menu</h2>
+
+      <div class="menu-actions">
+        <a href="/assets/menu.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Menu (PDF)</a>
+        <a href="/assets/menu.pdf" download class="btn btn-outline">Download Menu</a>
+      </div>
+
+      <h3>Today's Fridge Staples</h3>
+      <ul class="food-list">
+        <li>Ham &amp; Cheese Toastie</li>
+        <li>Cheese &amp; Tomato Toastie</li>
+        <li>Mozzarella &amp; Tomato</li>
+        <li>Egg Mayo</li>
+        <li>Cheese &amp; Onion</li>
+        <li>Tuna Mayo</li>
+        <li>Ham Salad</li>
+      </ul>
+
+      <h3>Porky Pies Collaboration</h3>
+      <ul class="food-list">
+        <li>Sausage Roll</li>
+        <li>Scotch Egg</li>
+        <li>Pork Pie</li>
+        <li>Minced Beef Pie</li>
+        <li>Chicken &amp; Mushroom Pie</li>
+        <li>Steak &amp; Ale Pie</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======== DRINKS ======== -->
+  <section class="section section-alt" id="drinks">
+    <div class="container">
+      <h2>Drinks</h2>
+      <div class="drinks-grid">
+
+        <div class="drinks-category">
+          <h3>Coffee</h3>
+          <ul>
+            <li>Single Espresso</li>
+            <li>Double Espresso</li>
+            <li>Cortado</li>
+            <li>Americano</li>
+            <li>Flat White</li>
+            <li>Latte</li>
+            <li>Cappuccino</li>
+          </ul>
+        </div>
+
+        <div class="drinks-category">
+          <h3>Tea</h3>
+          <ul>
+            <li>English Breakfast Tea</li>
+            <li>Herbal / Fruit Tea</li>
+          </ul>
+        </div>
+
+        <div class="drinks-category">
+          <h3>Speciality</h3>
+          <ul>
+            <li>Hot Chocolate</li>
+            <li>Chai Latte</li>
+            <li>Caramel Latte</li>
+            <li>Barraquito</li>
+          </ul>
+        </div>
+
+        <div class="drinks-category">
+          <h3>Iced Drinks</h3>
+          <ul>
+            <li>Strawberry Split Smoothie</li>
+            <li>Tropical Smoothie</li>
+            <li>Green Tornado Smoothie</li>
+            <li>Iced Americano</li>
+            <li>Iced Latte</li>
+            <li>Iced Mocha</li>
+            <li>Frappe Latte</li>
+            <li>Strawberry Frappe</li>
+            <li>Banana Frappe</li>
+          </ul>
+        </div>
+
+        <div class="drinks-category">
+          <h3>Seasonal</h3>
+          <ul>
+            <li>Strawberry + Vanilla Iced Matcha Latte</li>
+          </ul>
+        </div>
+
+        <div class="drinks-category">
+          <h3>Extras</h3>
+          <ul>
+            <li>Syrup / Cream</li>
+            <li>Oat Milk / Almond Milk</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== REVIEWS ======== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2>Reviews</h2>
+
+      <!-- TripAdvisor -->
+      <div class="reviews-subsection">
+        <h3>TripAdvisor</h3>
+        <div class="tripadvisor-placeholder">
+          <!-- ============================================
+               TODO: Paste your TripAdvisor widget code here
+               ============================================ -->
+          <p class="placeholder-note">TripAdvisor widget will appear here.<br>Paste your embed code to replace this placeholder.</p>
+        </div>
+      </div>
+
+      <!-- Facebook Reviews Gallery -->
+      <div class="reviews-subsection">
+        <h3>Facebook Reviews</h3>
+        <div class="fb-gallery" id="fb-gallery">
+          <!-- Images injected by script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LIGHTBOX ======== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Review image" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Review screenshot">
+  </div>
+
+  <!-- ======== FIND US ======== -->
+  <section class="section section-alt" id="find-us">
+    <div class="container">
+      <h2>Find Us</h2>
+      <p class="address">C. Coronel Ripollet, 4, Bajo Edif. Miami 3, 29640 Fuengirola, Málaga</p>
+      <div class="map-wrapper">
+        <iframe
+          title="Cafe del Sol location on Google Maps"
+          src="https://www.google.com/maps?q=C.+Coronel+Ripollet,+4,+Bajo+Edif.+Miami+3,+29640+Fuengirola,+M%C3%A1laga&output=embed"
+          width="600"
+          height="400"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div class="contact-buttons">
+        <!-- TODO:phone – Replace # with tel:+34XXXXXXXXX -->
+        <a href="tel:" class="btn btn-primary">Call Us</a>
+        <!-- TODO:email – Replace # with mailto:your@email.com -->
+        <a href="mailto:" class="btn btn-outline">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61565031385537" target="_blank" rel="noopener" aria-label="Facebook">
+          <!-- Facebook SVG icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/cafedelsolfuengirola/" target="_blank" rel="noopener" aria-label="Instagram">
+          <!-- Instagram SVG icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.08 4.08 0 0 1 1.523.99 4.08 4.08 0 0 1 .99 1.524c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.08 4.08 0 0 1-.99 1.523 4.08 4.08 0 0 1-1.524.99c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.08 4.08 0 0 1-1.523-.99 4.08 4.08 0 0 1-.99-1.524c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.08 4.08 0 0 1 .99-1.523A4.08 4.08 0 0 1 5.15 2.206c.46-.163 1.26-.349 2.43-.403C8.845 2.175 9.225 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.902.13 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.058 1.278.261 2.15.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.297 1.636.5 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.058 2.15-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.297-.763.5-1.636.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.278-.261-2.15-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63c-.763-.297-1.636-.5-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2025 Cafe del Sol. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
