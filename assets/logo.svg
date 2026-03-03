@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <rect width="400" height="100" fill="#0d0d0d"/>
+  <!-- Top gold line -->
+  <line x1="120" y1="18" x2="280" y2="18" stroke="#c9a84c" stroke-width="1.5"/>
+  <!-- Main title -->
+  <text x="200" y="50" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="6" fill="#ffffff">CAFE DEL SOL</text>
+  <!-- Bottom gold line -->
+  <line x1="120" y1="60" x2="280" y2="60" stroke="#c9a84c" stroke-width="1.5"/>
+  <!-- Subtitle -->
+  <text x="200" y="80" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" letter-spacing="8" fill="#ffffff">FUENGIROLA</text>
+</svg>
